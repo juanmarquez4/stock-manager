@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #282c34;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  background-color: #282c34;
+  color: white;
+}
+
+.footer {
+  background-color: #282c34;
+  color: white;
+}
+
+.login {
+  display: flex;
+  justify-content: flex-end;
+}
