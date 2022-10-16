@@ -1,18 +1,11 @@
-import React from 'react';
-// import { useQuery } from '@apollo/client'
-
-// import { QUERY_PROFILES } from '../utils/queries';
+import React from "react";
 
 import logo from '../logo.svg';
 
-// complete this ...
-const Home = () => {
-    // const { loading, data } = useQuery(QUERY_PROFILES);
-    // const profiles = data?.profiles || [];
-  
+const Categories = () => {
     return (
-      <main>
-       <header className="App-header">
+        <main>
+            <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>
                   Edit <code>src/App.js</code> and save to reload.
@@ -26,8 +19,8 @@ const Home = () => {
                   Learn React
                 </a>
         </header>
-      </main>
+        </main>
     );
-  };
-  
-  export default Home;
+};
+
+export default Categories;
