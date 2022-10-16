@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Categories from './pages/Categories';
 import Products from './pages/Products';
+import Purchases from './pages/Purchases';
 import Header from './components/Header';
 import Nav from './components/Nav'
 import Footer from './components/Footer';
@@ -55,17 +56,21 @@ function App() {
                 path="/login"
                 element={<Login />}
               />
-               <Route
+              <Route
                 path="/signup"
                 element={<Signup />}
               />
-               <Route
+              <Route
                 path="/categories"
                 element={<Categories />}
               />
-               <Route
+              <Route
                 path="/products"
                 element={<Products />}
+              />
+              <Route
+                path="/purchases"
+                element={<Purchases />}
               />
             </Routes>
           <Footer />
