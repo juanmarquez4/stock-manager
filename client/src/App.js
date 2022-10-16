@@ -12,6 +12,7 @@ import Home from './pages/Home'
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Categories from './pages/Categories';
+import Products from './pages/Products';
 import Header from './components/Header';
 import Nav from './components/Nav'
 import Footer from './components/Footer';
@@ -61,6 +62,10 @@ function App() {
                <Route
                 path="/categories"
                 element={<Categories />}
+              />
+               <Route
+                path="/products"
+                element={<Products />}
               />
             </Routes>
           <Footer />
