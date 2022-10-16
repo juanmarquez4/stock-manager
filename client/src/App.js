@@ -14,6 +14,7 @@ import Signup from './pages/Signup';
 import Categories from './pages/Categories';
 import Products from './pages/Products';
 import Purchases from './pages/Purchases';
+import Sales from './pages/Sales';
 import Header from './components/Header';
 import Nav from './components/Nav'
 import Footer from './components/Footer';
@@ -71,6 +72,10 @@ function App() {
               <Route
                 path="/purchases"
                 element={<Purchases />}
+              />
+              <Route
+                path="/sales"
+                element={<Sales />}
               />
             </Routes>
           <Footer />
