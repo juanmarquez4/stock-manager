@@ -1,25 +1,39 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-import logo from '../logo.svg';
 
 const Products = () => {
     return (
-        <main>
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                  Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                  className="App-link"
-                  href="https://reactjs.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Learn React
-                </a>
-        </header>
-        </main>
+      <container className="Card">
+        <div className="Card-header" >
+          <h1>Products</h1>
+          <Link>
+            <h1>Create</h1>
+          </Link>
+        </div>
+        <div>
+          <form>
+            <input
+            placeholder="Enter product name"
+            />
+            <button>
+              Search
+            </button>
+          </form>
+        </div>
+        <div className="Card-body">
+          <table>
+            <div className="Card-header">
+                <h1>name</h1>
+                <h1>Description</h1>
+            </div>
+            <div className="Card-header">
+                <h1>Wine</h1>
+                <h1>comes from grapes</h1>
+            </div>
+          </table>
+        </div>
+      </container>
     );
 };
 
