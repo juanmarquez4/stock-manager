@@ -6,7 +6,6 @@ type Profile {
     name: String
     email: String
     password: String
-    skills: [String]!
 }
 
 type Auth {
@@ -26,4 +25,4 @@ type Mutation {
 }
 `;
 
-module.ecports = typeDefs;
+module.exports = typeDefs;
