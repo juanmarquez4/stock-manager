@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
+import { Box } from "@chakra-ui/react"
 
 function Header() {
   const logout = (event) => {
@@ -9,8 +10,8 @@ function Header() {
     Auth.logout();
   };
   return (
-    <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
-    <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
+    <header>
+    <Box display="flex" justifyContent="space-between" bg="#282c34" color="#FFFFFF">
       <Link className="text-dark" to="/">
         <h1 className="m-0" style={{ fontSize: '3rem' }}>
           Stock Manager
@@ -35,7 +36,7 @@ function Header() {
           </>
         )}
       </div>
-    </div>
+    </Box>
   </header>
   );
 }

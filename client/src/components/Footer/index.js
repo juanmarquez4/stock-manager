@@ -1,10 +1,12 @@
 import React from "react";
 
+import { Box } from "@chakra-ui/react"
+
 function Footer() {
     return (
-    <footer className='footer'>
+    <Box className='footer'>
         <h1>Developed by Juan Marquez</h1>
-    </footer>
+    </Box>
     );
 }
 
