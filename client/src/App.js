@@ -16,7 +16,7 @@ import Products from './pages/Products';
 import Purchases from './pages/Purchases';
 import Sales from './pages/Sales';
 import Header from './components/Header';
-import Nav from './components/Nav'
+import Navv from './components/Nav'
 import Footer from './components/Footer';
 
 import './App.css';
@@ -47,7 +47,7 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-          <Nav />
+          <Navv />
             <Routes>
               <Route
                 path="/"
