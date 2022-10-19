@@ -53,7 +53,7 @@ const Signup = () => {
               </p>
             ) : (
               <Container>
-              <Card>
+              <Card className='m-3'>
               <Card.Header>Use this form to signup</Card.Header>
                 <Container>
                   <Form onSubmit={handleFormSubmit}>

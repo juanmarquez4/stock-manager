@@ -9,9 +9,9 @@ import Card from 'react-bootstrap/Card';
 const Products = () => {
     return (
       <Container>
-        <Card>
+        <Card className='m-3'>
           <Card.Header>Use this form to add a Product</Card.Header>
-            <Container>
+            <Container className='mt-3'>
               <Form >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Name</Form.Label>
@@ -39,7 +39,7 @@ const Products = () => {
                   <Form.Control type="text" placeholder="Enter product description" name="description"  />
                 </Form.Group>
               
-                <Button variant="primary" type="submit">Click to add Product</Button>
+                <Button variant="primary" type="submit" className='mb-3'>Click to add Product</Button>
               </Form>
             </Container>
         </Card>

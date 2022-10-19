@@ -51,7 +51,7 @@ const Login = (props) => {
               </p>
             ) : (
               <Container>
-              <Card>
+              <Card className='m-3'>
               <Card.Header>Use this form to login</Card.Header>
                 <Container>
                   <Form onSubmit={handleFormSubmit}>
