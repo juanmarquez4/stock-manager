@@ -14,6 +14,7 @@ function Navv() {
       };
     return (
         <>
+        <Container>
         <Navbar bg="light" expand="lg">
           <Container>
             <Navbar.Brand >Stock Manager</Navbar.Brand>
@@ -47,6 +48,8 @@ function Navv() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+        </Container>
+        
         </>
     );
 }

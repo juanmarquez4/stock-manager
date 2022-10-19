@@ -1,12 +1,16 @@
 import React from "react";
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
 
-import { Box } from "@chakra-ui/react"
 
 function Footer() {
     return (
-    <Box className='footer'>
-        <h1>Developed by Juan Marquez</h1>
-    </Box>
+    <Container>
+        <Card>
+            <Card.Link href="https://github.com/juanmarquez4">Developed by Juan Marquez</Card.Link>
+        </Card>
+    </Container>
+    
     );
 }
 
