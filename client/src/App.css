@@ -37,30 +37,30 @@
   }
 }
 
-.header {
+/* .header {
   display: flex;
   flex-wrap: wrap;
   background-color: #282c34;
   color: white;
-}
+} */
 
-.nav {
+/* .nav {
   display: flex;
   background-color: #282c34;
   color: white;
-}
+} */
 
-.footer {
+/* .footer {
   background-color: #282c34;
   color: white;
-}
+} */
 
-.login {
+/* .login {
   display: flex;
   justify-content: flex-end;
-}
+} */
 
-.Card {
+/* .Card {
   background-color: #282c34;
   display: flex;
   flex-direction: column;
@@ -68,9 +68,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.Card-header {
+/* .Card-header {
   display: flex;
   flex: auto;
-}
+} */
