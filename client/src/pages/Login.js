@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
 import Auth from '../utils/auth';
 
 const Login = (props) => {
@@ -38,53 +42,37 @@ const Login = (props) => {
     };
     
     return (
-      <main>
-        <div>
-          <div>
-            <h4>Login</h4>
-          <div className="card-body">
+      <>
             {data ? (
               <p>
                 Success! You may now head{' '}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-info"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
+              <Container>
+                <Container>
+                  <Form onSubmit={handleFormSubmit}>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control type="email" placeholder="Enter email" name="email"  value={formState.email} onChange={handleChange}/>
+                  </Form.Group>
 
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" placeholder="******" name="password"  value={formState.password} onChange={handleChange}/>
+                  </Form.Group>
+                
+                  <Button variant="primary" type="submit">Login</Button>
+                  </Form>
+                </Container>
+              </Container>
+            )}
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}
               </div>
             )}
-          </div>
-        </div>
-      </div>
-    </main>
+      </>
     );
 };
 
