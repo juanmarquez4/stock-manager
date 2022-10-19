@@ -15,7 +15,6 @@ import Categories from './pages/Categories';
 import Products from './pages/Products';
 import Purchases from './pages/Purchases';
 import Sales from './pages/Sales';
-import Header from './components/Header';
 import Navv from './components/Nav'
 import Footer from './components/Footer';
 
@@ -46,7 +45,6 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="App">
-          <Header />
           <Navv />
             <Routes>
               <Route
