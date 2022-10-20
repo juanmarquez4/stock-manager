@@ -17,3 +17,13 @@ export const QUERY_SINGLE_PROFILE = gql`
     }
   }
 `;
+
+export const QUERY_CATEGORIES = gql`
+  query allCategories {
+    categories {
+      _id
+      name
+    }
+  }
+`;
+
