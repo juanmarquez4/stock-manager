@@ -25,12 +25,9 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_CATEGORY = gql`
-  mutation addCategory (name: String!) {
-    addCategory (name: $name) {
-      category {
-        _id
+  mutation addCategory($name: String!) {
+    addCategory(name: $name) {
         name
-      }
     }
   }
 `;

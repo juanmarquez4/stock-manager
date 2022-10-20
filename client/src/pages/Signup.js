@@ -84,7 +84,7 @@ const Signup = () => {
                 {error.message}
               </div>
             )}
-  </>
+    </>
   );
 };
 
