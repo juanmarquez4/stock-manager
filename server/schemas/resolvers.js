@@ -58,10 +58,10 @@ const resolvers = {
           return { token, profile };
         },
       removeProfile: async (parent, { profileId }) => {
-          return Profile.findOneAndDelete({ _id: profileId });
+          return await Profile.findOneAndDelete({ _id: profileId });
         },
-      addProduct: async (parent, {name, description, image, quantity } ) => {
-        return await Product.create({name, description, image, quantity })
+      addProduct: async (parent, {name, description, quantity, category }) => {
+        return await Product.create({name, description, quantity, category })
       },
       updateProduct: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;

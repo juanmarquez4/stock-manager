@@ -10,7 +10,6 @@ type Product {
     _id: ID
     name: String
     description: String
-    image: String
     quantity: Int
     category: Category
 }
@@ -39,7 +38,7 @@ type Mutation {
     addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     removeProfile(profileId: ID!): Profile
-    addProduct(name: String!, description: String, image: String, quantity: Int): Product
+    addProduct(name: String!, description: String, quantity: Int!, category: String!): Product
     updateProduct(_id: ID!, quantity: Int!): Product
     addCategory(name: String!): Category
 }

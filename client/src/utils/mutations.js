@@ -31,3 +31,17 @@ export const ADD_CATEGORY = gql`
     }
   }
 `;
+
+export const ADD_PRODUCT =  gql`
+mutation AddProduct($name: String!, $quantity: Int!, $category: String!) {
+  addProduct(name: $name, quantity: $quantity, category: $category) {
+    name
+    description
+    quantity
+    category {
+      name
+    }
+  }
+}
+`;
+
