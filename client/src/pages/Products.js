@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import { useMutation } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import { ADD_PRODUCT } from "../utils/mutations";
+import { QUERY_CATEGORIES } from "../utils/queries";
 
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
@@ -13,9 +14,20 @@ import Auth from '../utils/auth';
 const Products = () => {
   const [formState, setFormState] = useState({ name: '' });
   const [addProduct, { error, data }] = useMutation(ADD_PRODUCT);
+ 
+  const { loading, data: categoriesData } = useQuery(QUERY_CATEGORIES);
+  
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+
+    if (name === "quantity") {
+      setFormState({
+        ...formState,
+        [name]: parseInt(value),
+      });
+      return
+    } 
 
     setFormState({
       ...formState,
@@ -61,14 +73,12 @@ const Products = () => {
                   <Form.Label>Name</Form.Label>
                   <Form.Control type="text" placeholder="Enter product name" name="name" value={formState.name} onChange={handleChange}/>
                 </Form.Group>
-
+      
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Categories</Form.Label>
-                  <Form.Select aria-label="Default select example" value={formState.category} onChange={handleChange}>
+                  <Form.Select aria-label="Default select example" value={formState.category} onChange={handleChange} name="category">
                     <option>Select a Category for this product</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    {!loading && categoriesData.categories.map(category => <option value={category._id} > {category.name}</option>) }
                   </Form.Select>
                 </Form.Group>
 

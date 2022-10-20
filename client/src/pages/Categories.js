@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_CATEGORY } from "../utils/mutations";
 
+
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -13,6 +14,8 @@ import Auth from '../utils/auth';
 const Categories = () => {
   const [formState, setFormState] = useState({ name: '' });
   const [addCategory, { error, data }] = useMutation(ADD_CATEGORY);
+
+
 
   const handleChange = (event) => {
     const { name, value } = event.target;
