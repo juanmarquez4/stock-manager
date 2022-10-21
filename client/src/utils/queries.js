@@ -28,11 +28,16 @@ export const QUERY_CATEGORIES = gql`
 `;
 
 export const QUERY_PRODUCTS = gql`
-  query allProducts {
-    products {
-      _id
+query Products {
+  products {
+    _id
+    name
+    description
+    quantity
+    category {
       name
     }
   }
+}
 `
 

@@ -1,16 +1,18 @@
 import React from 'react';
+// import { useMutation, useQuery } from "@apollo/client";
 
-// import { useQuery } from '@apollo/client'
 
 // import { QUERY_PROFILES } from '../utils/queries';
 
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
+// import { QUERY_PRODUCTS } from '../utils/queries';
 
 // complete this ...
 const Home = () => {
-    // const { loading, data } = useQuery(QUERY_PROFILES);
+
+    // const { loading, data } = useQuery(QUERY_PRODUCTS);
     // const profiles = data?.profiles || [];
   
     return (
