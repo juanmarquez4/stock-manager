@@ -11,8 +11,7 @@ function Welcome() {
             <Card className='m-3'>
                 <Card.Header>Welcome to Stock Manager</Card.Header>
                 <Card.Body>
-                    <p>You need to be logged in to "_". Please{' '}<Link to="/login">login</Link> or <Link to="/signup">signup.</Link></p>
-                    <h1>Hello</h1>
+                    <p>Please{' '}<Link to="/login">login</Link> or <Link to="/signup">signup</Link> in order to add Categories and Products to your Stock Manager.</p>
                 </Card.Body>
             </Card>
         </Container>

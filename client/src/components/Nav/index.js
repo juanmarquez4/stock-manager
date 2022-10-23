@@ -21,15 +21,22 @@ function Navv() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
+                {Auth.loggedIn() ? (
+                   <>
+                    <LinkContainer to="/">
+                      <Nav.Link href="#home">Home</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/categories">
+                        <Nav.Link href="#link">Categories</Nav.Link>
+                     </LinkContainer>
+                     <LinkContainer to="/products">
+                        <Nav.Link href="#link">Products</Nav.Link>
+                    </LinkContainer></>
+               ) : (
                 <LinkContainer to="/">
-                    <Nav.Link href="#home">Home</Nav.Link>
+                  <Nav.Link href="#home">Home</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/categories">
-                    <Nav.Link href="#link">Categories</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/products">
-                    <Nav.Link href="#link">Products</Nav.Link>
-                </LinkContainer>
+               )}
               </Nav>
               <Form>
                 {Auth.loggedIn() ? (
