@@ -9,7 +9,7 @@ import Table from 'react-bootstrap/Table';
 // complete this ...
 const Home = () => {
     const { loading, data } = useQuery(QUERY_PRODUCTS);
-    const products = data?.products || [];
+    // const products = data?.products || [];
   
     return (
       <Container >
@@ -28,18 +28,12 @@ const Home = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Little Giant</td>
-              <td>Wine</td>
-              <td>15</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Serpent Kiss</td>
-              <td>Beer</td>
-              <td>36</td>
-            </tr>
+            {!loading && data.products.map(product => <tr value={product._id} >
+              <td>{product._id}</td>
+              <td>{product.name}</td>
+              <td>{product.category.name}</td>
+              <td>{product.quantity}</td>
+            </tr>)}
           </tbody>
         </Table>
 
