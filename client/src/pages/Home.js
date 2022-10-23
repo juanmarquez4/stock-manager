@@ -25,6 +25,7 @@ const Home = () => {
               <th>Product Name</th>
               <th>Category</th>
               <th>Number of items in store</th>
+              <th>Description</th>
             </tr>
           </thead>
           <tbody>
@@ -33,6 +34,7 @@ const Home = () => {
               <td>{product.name}</td>
               <td>{product.category.name}</td>
               <td>{product.quantity}</td>
+              <td>{product.description}</td>
             </tr>)}
           </tbody>
         </Table>

@@ -33,8 +33,8 @@ export const ADD_CATEGORY = gql`
 `;
 
 export const ADD_PRODUCT =  gql`
-mutation AddProduct($name: String!, $quantity: Int!, $category: String!) {
-  addProduct(name: $name, quantity: $quantity, category: $category) {
+mutation AddProduct($name: String!, $quantity: Int!, $category: String!, $description: String) {
+  addProduct(name: $name, quantity: $quantity, category: $category, description: $description) {
     name
     description
     quantity
