@@ -1,4 +1,5 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
 import { useQuery } from "@apollo/client";
 import { QUERY_PRODUCTS } from '../utils/queries';
 
@@ -6,12 +7,18 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 
+import Welcome from '../components/Welcome';
+
+import Auth from '../utils/auth';
+
 // complete this ...
 const Home = () => {
     const { loading, data } = useQuery(QUERY_PRODUCTS);
     // const products = data?.products || [];
   
     return (
+      <>
+       {Auth.loggedIn() ? (
       <Container >
         <Card className='m-3'>
           <Card.Header>React Stock & Inventory Manager</Card.Header>
@@ -42,7 +49,17 @@ const Home = () => {
         </Container>
         
       </Container>
+       ) : (
+        <>
+        <Welcome />
+        </>
+       )}
+      </>
+      
     );
   };
   
-  export default Home;
+  export default Home;   
+  
+  
+  

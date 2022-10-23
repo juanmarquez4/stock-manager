@@ -55,7 +55,7 @@ const Signup = () => {
               <Container>
               <Card className='m-3'>
               <Card.Header>Use this form to signup</Card.Header>
-                <Container>
+                <Container className='my-3'>
                   <Form onSubmit={handleFormSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>Username</Form.Label>

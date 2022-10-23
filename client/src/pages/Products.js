@@ -58,12 +58,7 @@ const Products = () => {
 
     return (
       <>
-      {data ? (
-              <p>
-                Success! Product added{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
+      {Auth.loggedIn() ? (
       <Container>
         <Card className='m-3'>
           <Card.Header>Use this form to add a Product</Card.Header>
@@ -98,6 +93,11 @@ const Products = () => {
             </Container>
         </Card>
       </Container>
+      ) : (
+        <p>
+          You need to be logged in to "_". Please{' '}
+          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+        </p>
        )}
 
        {error && (

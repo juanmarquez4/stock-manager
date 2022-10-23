@@ -53,7 +53,7 @@ const Login = (props) => {
               <Container>
               <Card className='m-3'>
               <Card.Header>Use this form to login</Card.Header>
-                <Container>
+                <Container className='my-3'>
                   <Form onSubmit={handleFormSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>Email address</Form.Label>
