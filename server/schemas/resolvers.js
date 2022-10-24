@@ -61,15 +61,18 @@ const resolvers = {
           return await Profile.findOneAndDelete({ _id: profileId });
         },
       addProduct: async (parent, {name, description, quantity, category }) => {
-        return await Product.create({name, description, quantity, category })
+          return await Product.create({name, description, quantity, category })
+      },
+      removeProduct: async (parent, {productId }) => {
+          return await Product.findOneAndDelete({ _id: productId });
       },
       updateProduct: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
 
-      return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+          return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
       },
       addCategory: async (parent, {name}) => {
-        return await Category.create({name})
+          return await Category.create({name})
       },
     }
 };

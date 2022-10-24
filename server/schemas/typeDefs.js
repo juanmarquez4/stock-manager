@@ -39,6 +39,7 @@ type Mutation {
     login(email: String!, password: String!): Auth
     removeProfile(profileId: ID!): Profile
     addProduct(name: String!, description: String, quantity: Int!, category: String!): Product
+    removeProduct(_id: ID!): Product
     updateProduct(_id: ID!, quantity: Int!): Product
     addCategory(name: String!): Category
 }
