@@ -9,6 +9,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 
+import Welcome from '../components/Welcome';
+
 import Auth from '../utils/auth';
 
 const Categories = () => {
@@ -69,10 +71,9 @@ const Categories = () => {
           </Card>
         </Container>
             ) : (
-              <p>
-                You need to be logged in to "_". Please{' '}
-                <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
-              </p>
+              <>
+              <Welcome />
+              </>
          )}
 
          {error && (
