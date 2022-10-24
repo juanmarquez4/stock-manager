@@ -45,3 +45,11 @@ mutation AddProduct($name: String!, $quantity: Int!, $category: String!, $descri
 }
 `;
 
+export const REMOVE_PRODUCT =  gql`
+mutation RemoveProduct($productId: ID!) {
+  removeProduct(productId: $productId) {
+    name
+  }
+}
+`;
+
