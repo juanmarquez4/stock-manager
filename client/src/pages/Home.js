@@ -24,9 +24,7 @@ const Home = () => {
   );
 
     const { loading, data } = useQuery(QUERY_PRODUCTS);
-    // const products = data?.products || [];
-  
-    console.log(data);
+
 
 
     return (
