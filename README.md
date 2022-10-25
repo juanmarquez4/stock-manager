@@ -24,7 +24,7 @@
 
 ## DESCRIPTION
 
-Manage your business stock in a convinient way with Stock Manager React app.
+    Manage your business stock in a convinient way with Stock Manager React app.
 
 <a id="SCREENSHOTS"></a>
 
