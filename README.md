@@ -61,10 +61,10 @@ Run the following command:
 
 ## USAGE
 
-Run the following command:
- npm run start: to initialize back end
- or
- npm run develop
+    Run the following command:
+     npm run start: to initialize back end
+     or
+     npm run develop
 
 <a id="TECHNOLOGIESUSED"></a>
 
