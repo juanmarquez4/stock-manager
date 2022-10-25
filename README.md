@@ -30,9 +30,9 @@
 
 ## SCREENSHOTS
 
-![](public/assets/images/Splashtest.png)"
+![](client/public/assets/Welcome page.png)"
 
-![](public/assets/images/OnlyBlogs-Homepage.png)
+![](public/assets/Signup page.png)
 
 <a id="INSTALLATION"></a>
 
