@@ -24,7 +24,7 @@
 
 ## DESCRIPTION
 
-
+Manage your business stock in a convinient way with Stock Manager React app.
 
 <a id="SCREENSHOTS"></a>
 
@@ -46,19 +46,35 @@
 
 ## INSTALLATION
 
+In your project folder, run the following commands:
+ git clone git@github.com:juanmarquez4/stock-manager.git
+ cd stock-manager
+
+Create a file called .env in the server folder, and set the following vars:
+ MONGODB_URI="yourMongoDBLink"
+ SECRET="yourSecretKey"
  
+Run the following command:
+ npm install
 
 <a id="USAGE"></a>
 
 ## USAGE
 
-
+Run the following command:
+ npm run start: to initialize back end
+ or
+ npm run develop
 
 <a id="TECHNOLOGIESUSED"></a>
 
 ## TECHNOLOGIES USED
 
-
+ REACT
+ NODE.JS
+ EXPRESS.JS
+ MONGODB/MONGOOSE
+ BOOTSTRAP
 
 <a id="CONTRIBUTE"></a>
 
