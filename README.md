@@ -34,6 +34,14 @@
 
 ![](client/public/assets/Signuppage.png)
 
+![](client/public/assets/Loginpage.png)
+
+![](client/public/assets/Homepage.png)
+
+![](client/public/assets/Categorypage.png)
+
+![](client/public/assets/Productpage.png)
+
 <a id="INSTALLATION"></a>
 
 ## INSTALLATION
