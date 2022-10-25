@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_CATEGORY } from "../utils/mutations";
 
@@ -15,7 +15,7 @@ import Auth from '../utils/auth';
 
 const Categories = () => {
   const [formState, setFormState] = useState({ name: '' });
-  const [addCategory, { error, data }] = useMutation(ADD_CATEGORY);
+  const [addCategory, { error,}] = useMutation(ADD_CATEGORY);
 
 
 
@@ -50,8 +50,8 @@ const Categories = () => {
     return (
     <>
     {Auth.loggedIn() ? (
-      <Container>
-        <Card className='m-3'>
+      <Container className='min-vh-100'>
+        <Card className='m-3' border="success">
           <Card.Header>Use this form to add a Category</Card.Header>
             <Container className='mt-3'>
               <Form onSubmit={handleFormSubmit}>
@@ -60,12 +60,12 @@ const Categories = () => {
                   <Form.Control type="text" placeholder="Enter category name" name="name" value={formState.name} onChange={handleChange} />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                {/* <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Description</Form.Label>
                   <Form.Control type="text" placeholder="Enter category description" name="description" value={formState.description} onChange={handleChange}  />
-                </Form.Group>
+                </Form.Group> */}
               
-                <Button className='mb-3' variant="primary" type="submit">Click to add Category</Button>
+                <Button className='mb-3' variant="success" type="submit">Click to add Category</Button>
               </Form>
             </Container>
           </Card>

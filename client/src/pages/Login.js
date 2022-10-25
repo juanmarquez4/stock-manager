@@ -50,8 +50,8 @@ const Login = (props) => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <Container>
-              <Card className='m-3'>
+              <Container className='min-vh-100'>
+              <Card className='m-3' border="success">
               <Card.Header>Use this form to login</Card.Header>
                 <Container className='my-3'>
                   <Form onSubmit={handleFormSubmit}>
@@ -60,12 +60,12 @@ const Login = (props) => {
                       <Form.Control type="email" placeholder="Enter email" name="email"  value={formState.email} onChange={handleChange}/>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
                       <Form.Label>Password</Form.Label>
                       <Form.Control type="password" placeholder="******" name="password"  value={formState.password} onChange={handleChange}/>
                     </Form.Group>
                   
-                    <Button variant="primary" type="submit">Click to Login</Button>
+                    <Button variant="success" type="submit">Click to Login</Button>
                   </Form>
                 </Container>
               </Card>

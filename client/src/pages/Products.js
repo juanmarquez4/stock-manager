@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useMutation, useQuery } from "@apollo/client";
 import { ADD_PRODUCT } from "../utils/mutations";
 import { QUERY_CATEGORIES } from "../utils/queries";
@@ -15,7 +15,7 @@ import Auth from '../utils/auth';
 
 const Products = () => {
   const [formState, setFormState] = useState({ name: '' });
-  const [addProduct, { error, data }] = useMutation(ADD_PRODUCT);
+  const [addProduct, { error, }] = useMutation(ADD_PRODUCT);
  
   const { loading, data: categoriesData } = useQuery(QUERY_CATEGORIES);
   
@@ -61,8 +61,8 @@ const Products = () => {
     return (
       <>
       {Auth.loggedIn() ? (
-      <Container>
-        <Card className='m-3'>
+      <Container className='min-vh-100'>
+        <Card className='m-3' border="success">
           <Card.Header>Use this form to add a Product</Card.Header>
             <Container className='mt-3'>
               <Form onSubmit={handleFormSubmit}>
@@ -90,7 +90,7 @@ const Products = () => {
                   <Form.Control type="text" placeholder="Enter product description" name="description" value={formState.description} onChange={handleChange}/>
                 </Form.Group>
               
-                <Button variant="primary" type="submit" className='mb-3'>Click to add Product</Button>
+                <Button variant="success" type="submit" className='mb-3'>Click to add Product</Button>
               </Form>
             </Container>
         </Card>

@@ -40,14 +40,14 @@ function Navv() {
               </Nav>
               <Form>
                 {Auth.loggedIn() ? (
-                    <Button onClick={logout}>Logout</Button>
+                    <Button className="btn btn-lg btn-success m-2" onClick={logout}>Logout</Button>
                     ) : (
                         <>
                             <LinkContainer to="/login">
-                            <Button className="btn btn-lg btn-primary m-2">Login</Button>
+                            <Button className="btn btn-lg btn-success m-2">Login</Button>
                             </LinkContainer>
                             <LinkContainer to="/signup">
-                            <Button className="btn btn-lg btn-primary m-2">Signup</Button>
+                            <Button className="btn btn-lg btn-success m-2">Signup</Button>
                             </LinkContainer>
                         </>
                 )}

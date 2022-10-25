@@ -8,6 +8,9 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+
 import Home from './pages/Home'
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -44,7 +47,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="App">
+        <div className="App ">
+          <Container className="">
+          <Card className='m-3 p-3 bg-secondary '>
           <Navv />
             <Routes>
               <Route
@@ -68,7 +73,11 @@ function App() {
                 element={<Products />}
               />
             </Routes>
-          <Footer />
+          <Footer  />
+          </Card>
+          </Container>
+          
+          
         </div>
       </Router>
     </ApolloProvider>

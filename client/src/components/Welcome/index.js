@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 function Welcome() {
     return (
         <>
-        <Container>
-            <Card className='m-3'>
+        <Container className='min-vh-100'>
+            <Card className='m-3 ' border="success">
                 <Card.Header>Welcome to Stock Manager</Card.Header>
                 <Card.Body>
                     <p>Please{' '}<Link to="/login">login</Link> or <Link to="/signup">signup</Link> in order to add Categories and Products to your Stock Manager.</p>

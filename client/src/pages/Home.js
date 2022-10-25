@@ -30,9 +30,8 @@ const Home = () => {
     return (
       <>
        {Auth.loggedIn() ? (
-      <Container >
-
-        <Card className='m-3'>
+      <Container className='min-vh-100'>
+        <Card border="success" className='m-3' >
         <Card.Header>Stock in store</Card.Header>
         <Card.Body>
           <Table striped  hover >

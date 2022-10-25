@@ -52,12 +52,12 @@ const Signup = () => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <Container>
-              <Card className='m-3'>
+              <Container className='min-vh-100'>
+              <Card  border="success" className='m-3'>
               <Card.Header>Use this form to signup</Card.Header>
                 <Container className='my-3'>
                   <Form onSubmit={handleFormSubmit}>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3" controlId="formBasicUser">
                       <Form.Label>Username</Form.Label>
                       <Form.Control type="text" placeholder="Your username" name="name"  value={formState.name} onChange={handleChange}/>
                     </Form.Group>
@@ -67,12 +67,12 @@ const Signup = () => {
                       <Form.Control type="email" placeholder="Your email" name="email"  value={formState.email} onChange={handleChange}/>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3" controlId="formBasicPasword">
                       <Form.Label>Password</Form.Label>
                       <Form.Control type="password" placeholder="******" name="password"  value={formState.password} onChange={handleChange}/>
                     </Form.Group>
                   
-                    <Button variant="primary" type="submit">Click to Signup</Button>
+                    <Button variant="success" type="submit">Click to Signup</Button>
                   </Form>
                 </Container>
               </Card>
