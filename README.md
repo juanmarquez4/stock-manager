@@ -30,9 +30,9 @@
 
 ## SCREENSHOTS
 
-![](client/public/assets/Welcome page.png)"
+![](client/public/assets/Welcome page.png)
 
-![](public/assets/Signup page.png)
+![](client/public/assets/Signup page.png)
 
 <a id="INSTALLATION"></a>
 
