@@ -14,6 +14,7 @@ import Container from 'react-bootstrap/Container';
 import Home from './pages/Home'
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Dashboard from './pages/Dashboard';
 import Categories from './pages/Categories';
 import Products from './pages/Products';
 
@@ -64,6 +65,10 @@ function App() {
                 path="/signup"
                 element={<Signup />}
               />
+              <Route
+                path="/dashboard"
+                element={<Dashboard />}
+              /> 
               <Route
                 path="/categories"
                 element={<Categories />}

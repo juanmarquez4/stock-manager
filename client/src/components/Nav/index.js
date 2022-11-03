@@ -1,10 +1,12 @@
 import React from "react";
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {LinkContainer} from 'react-router-bootstrap'
+
 import Auth from '../../utils/auth';
 
 function Navv() {
@@ -25,6 +27,9 @@ function Navv() {
                    <>
                     <LinkContainer to="/">
                       <Nav.Link href="#home">Home</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/">
+                      <Nav.Link href="#home">Dashboard</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/categories">
                         <Nav.Link href="#link">Categories</Nav.Link>
